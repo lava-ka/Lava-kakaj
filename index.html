@@ -909,7 +909,7 @@ function renderFiles(){
       <span class="tag">${isAr() ? (f.type_ar||'') : (f.type_en||'')}</span>
       <h3>${isAr() ? f.title_ar : f.title_en}</h3>
       <p>${isAr() ? f.desc_ar : f.desc_en}</p>
-      ${f.fileUrl ? `<a class="dl" href="${f.fileUrl}" target="_blank" rel="noopener">${isAr()?'تحميل ↓':'Download ↓'}</a>` : ''}
+      ${f.fileUrl ? `<a class="dl" href="${f.fileUrl}" target="_blank" rel="noopener" download>${isAr()?'تحميل ↓':'Download ↓'}
     </div>
   `).join('');
 }
