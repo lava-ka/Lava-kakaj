@@ -909,7 +909,11 @@ function renderFiles(){
       <span class="tag">${isAr() ? (f.type_ar||'') : (f.type_en||'')}</span>
       <h3>${isAr() ? f.title_ar : f.title_en}</h3>
       <p>${isAr() ? f.desc_ar : f.desc_en}</p>
-      ${f.fileUrl ? `<a class="dl" href="${f.fileUrl}" target="_blank" rel="noopener" download>${isAr()?'تحميل ↓':'Download ↓'}</a>` : ''}
+      ${f.fileUrl ? `
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
+  <a class="dl" href="${f.fileUrl}" target="_blank" rel="noopener" style="color:#A569E8;border:1px solid rgba(138,43,226,0.4);padding:6px 14px;font-size:0.85rem;font-weight:600;">${isAr()?'قراءة 👁':'Read 👁'}</a>
+  <a class="dl" href="${f.fileUrl}" target="_blank" rel="noopener" download style="color:#8A2BE2;border:1px solid rgba(138,43,226,0.4);padding:6px 14px;font-size:0.85rem;font-weight:600;">${isAr()?'تحميل ↓':'Download ↓'}</a>
+</div>` : ''}
     </div>
   `).join('');
 }
